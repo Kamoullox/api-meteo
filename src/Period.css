@@ -1,0 +1,12 @@
+.period {
+    width: 20%;
+    color: white;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background: linear-gradient(40deg, rgba(213,151,175,0.804359243697479) 25%, rgba(207,209,204,0.7651435574229692) 50%, rgba(113,131,101,0.9023984593837535) 75%);
+}
