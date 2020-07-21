@@ -15,7 +15,6 @@ class BaseMeteo extends Component {
             'Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'
         ],
         sameDays: false
-        
     }
 
 
@@ -41,7 +40,6 @@ class BaseMeteo extends Component {
                 })
             }
         })
-
     }
 
 
@@ -85,18 +83,11 @@ class BaseMeteo extends Component {
                 return <Period period={period} indexOfDay={this.state.indexOfDay} days={this.state.days} indexNextDays={indexNextDays}/>
             }); 
         }
-        
-       
-
-
 
         let today = this.state.today.map(today => {
             return <TodayMeteo today={today}/>;
         }); 
-        
-        
-        
-
+     
         // let today = this.state.today;
         // let imgUrl = "http://openweathermap.org/img/wn/"+today.weather[0].icon+"@2x.png";
         return ( 
