@@ -7,14 +7,21 @@ class TodayMeteo extends Component {
      }
     render() { 
         let today = this.props.today;
+        let city = this.props.city;
         let imgUrl = "http://openweathermap.org/img/wn/"+today.weather[0].icon+"@2x.png";
+        console.log(city);
         return ( 
             <div className="todayMeteo">
-                {/* <h1>{this.props.week[this.props.day-1]}</h1> */}
-                <span className="">Aujourd'hui</span>
-                <span> {today.weather[0].description}</span>
-                <img src={imgUrl} alt="icone"/>
-                <span> {today.main.temp} °C</span>
+                <div className="icone">
+                    <img className="" src={imgUrl} alt="icone"/>
+                </div>
+
+                <div className="detail">
+                    <span className="">Aujourd'hui</span>
+                    <span className="city"> { city } </span>
+                    <span> {today.weather[0].description}</span>
+                    <span> Température {today.main.temp} °C</span>
+                </div>
             </div>
          );
     }

@@ -20,12 +20,11 @@ class Period extends Component {
         // let cityName = this.props.result.city.name;
         return ( 
             <div className="period">
-                <h2>{indexTabDays === 0 ? this.props.days[indexTabDays] : this.props.days[indexTabDays-1]}</h2>
-
-                {/* <span className="">{period.dt_txt}</span> */}
-                {/* <span> {period.weather[0].description}</span> */}
-                <img src={imgUrl} alt="icone"/>
-                <span> {period.main.temp} °C</span>
+                    <h2>{indexTabDays === 0 ? this.props.days[indexTabDays] : this.props.days[indexTabDays-1]}</h2>
+                    {/* <span className="">{period.dt_txt}</span> */}
+                    {/* <span> {period.weather[0].description}</span> */}
+                    <img src={imgUrl} alt="icone"/>
+                    <span> {period.main.temp} °C</span>
             </div>
         )
     }

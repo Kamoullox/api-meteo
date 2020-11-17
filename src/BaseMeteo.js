@@ -22,7 +22,6 @@ class BaseMeteo extends Component {
         let d = new Date(); // Créer une variable date avec la date du jour
         axios.get ('https://api.openweathermap.org/data/2.5/forecast?q='+this.state.currentCity+'&lang=fr&units=metric&appid=e391e4ab0e327da8c1f398e39a6b666c')
         .then (res => {
-            
             // enregistre les informations dans le state une fois la page chargé
             this.setState ({
                 period: res.data.list.filter(period => period.dt_txt.includes("12")),
@@ -85,11 +84,10 @@ class BaseMeteo extends Component {
         }
 
         let today = this.state.today.map(today => {
-            return <TodayMeteo today={today}/>;
+            return <TodayMeteo today={today} city={this.state.currentCity}/>;
         }); 
      
-        // let today = this.state.today;
-        // let imgUrl = "http://openweathermap.org/img/wn/"+today.weather[0].icon+"@2x.png";
+        
         return ( 
             <div className="BaseMeteo">
                 <div className="container"> 
